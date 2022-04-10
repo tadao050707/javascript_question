@@ -16,7 +16,7 @@
     //初期表示イベント
     document.addEventListener(
         //Webページが読み込みが完了したとき、ランダムに問題を表示する
-        'DOMContentLoded',function()
+        'DOMContentLoaded',function()
         {
             let tmpAry = Questions.concat();
               
@@ -62,7 +62,7 @@
             //ボタン生成,css付与
             var button = document.createElement('button');
             button.innerHTML = question.selects[i];
-            button.setAttribute('style',' display:block ; min-width:300px;cursor:pointer;');
+            button.setAttribute('style',' display:block ; min-width:300px;cursor:pointer; margin-top: 5px; ');
             //ボタンクリックイベント処理
             button.addEventListener('click',function(){
                 judgeAnswer(number,question.selects[i])
