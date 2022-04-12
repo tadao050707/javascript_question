@@ -44,6 +44,7 @@
     //関数宣言 問題表示
     function setQuestion(number){
         //HTML.CSS要素取得、Answers、resultの挿入
+        countQuestions(number)
         document.querySelector('#Answers').innerHTML = '';
         document.querySelector('#result').innerHTML ='';
         //HTML.CSS要素取得、文字の変換
@@ -96,4 +97,10 @@
         this.answer = answer;
         //解答配列呼び出し
         this.selects = [answer,wrong1,wrong2,wrong3];
+    }
+
+    function countQuestions(number) {
+        if (number + 1 <= Questions.length) {
+            document.querySelector('#problemsCount').innerHTML = (number + 1)+"問目 "  + "/ 全 " + Questions.length + " 問中";
+        } 
     }
