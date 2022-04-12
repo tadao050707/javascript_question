@@ -98,7 +98,7 @@
         //解答配列呼び出し
         this.selects = [answer,wrong1,wrong2,wrong3];
     }
-
+    //問題数カウント関数
     function countQuestions(number) {
         if (number + 1 <= Questions.length) {
             document.querySelector('#problemsCount').innerHTML = (number + 1)+"問目 "  + "/ 全 " + Questions.length + " 問中";
