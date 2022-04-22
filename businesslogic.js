@@ -60,7 +60,7 @@ function setQuestion(number) {
     //関数呼び出し
     countQuestions(number)
     document.querySelector('#Answers').innerHTML = '';
-    document.querySelector('#result').innerHTML = '';
+    // document.querySelector('#result').innerHTML = '';
     //CurrentQuestion要素とnumberが等しいかそれ以下なら処理終了
     if (CurrentQuestion.length <= number) {
         return;
@@ -93,7 +93,7 @@ function judgeAnswer(number, value) {
         //checkQuestion関数呼び出し
         checkQuestion(number, value)
         //idリザルトに表示
-        document.querySelector('#result').innerHTML = '';
+        // document.querySelector('#result').innerHTML = '';
         //問題数１づつ増やす
         setQuestion(number + 1)
         
@@ -141,8 +141,10 @@ function countQuestions(number) {
             //すべての問題が完了した後に表示する
             //カウントは0から始まるので+1している
             if (index + 1 == answersAry.length) {
-                
-                document.querySelector('#Sentence').innerHTML = "正解数は " + AnswersCount + " 問です!";
+                document.getElementById('exe').style.display = 'none';
+                document.querySelector('#result').style.display = 'block';
+                document.querySelector('#result').innerHTML = "正解数は " + AnswersCount + " 問です!";
+                // document.querySelector('#Sentence').innerHTML = "正解数は " + AnswersCount + " 問です!";
             }
         })
     }

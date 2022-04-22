@@ -36,3 +36,12 @@ body {
 button{
     margin-left: 240px;
 }
+
+#result{
+    display: none;
+    width: 400px;
+    margin: 8px auto;
+    background: rgb(255, 255, 255);
+    border-radius: 4px;
+    padding: 80px;
+}
